@@ -1,0 +1,17 @@
+name: Useless CI run (so RUN)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Got get some sleep, please
+        id: get-some-sleep-please-its-good-for-you
+        run: sleep 60
